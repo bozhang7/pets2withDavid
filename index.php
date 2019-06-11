@@ -44,5 +44,23 @@
         echo $view->render('home.html');
     });
 
-    // runs f3
-    $f3->run();
+
+//define route  order 1
+
+$f3->route('GET /order', function ()
+{
+    $view=new Template();
+    echo $view->render( 'views/form1.html');
+
+
+
+
+});
+
+
+
+
+
+//Run fat free
+$f3 ->run();
+
