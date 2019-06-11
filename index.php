@@ -22,5 +22,27 @@
         echo $view->render('home.html');
     });
 
+    // defines a route that accepts parameter for animal type
+    $f3->route('GET /@type', function($f3, $params) {
+
+        $type = $params['type'];
+        if ($type == 'chicken') {
+            echo 'Cluck!';
+        } else if ($type == 'dog') {
+            echo 'Woof!';
+        } else if ($type == 'cat') {
+            echo 'Meow';
+        } else if ($type == 'snake') {
+            echo 'Hiss';
+        } else if ($type == 'pig') {
+            echo 'oink';
+        } else {
+            $f3->error(404);
+        }
+
+        $view = new Template();
+        echo $view->render('home.html');
+    });
+
     // runs f3
     $f3->run();
