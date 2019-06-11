@@ -45,22 +45,13 @@
     });
 
 
-//define route  order 1
+    //define route for order 1
+    $f3->route('GET /order', function ()
+    {
+        $view=new Template();
+        echo $view->render( 'views/form1.html');
+    });
 
-$f3->route('GET /order', function ()
-{
-    $view=new Template();
-    echo $view->render( 'views/form1.html');
-
-
-
-
-});
-
-
-
-
-
-//Run fat free
-$f3 ->run();
+    //Run fat free
+    $f3 ->run();
 
